@@ -9,6 +9,7 @@ class Gif extends Component {
       gifUrl: '',
     }
   }
+
   shouldComponentUpdate(nextProps,nextState){
     return this.state.gifUrl !== nextState.gifUrl;
   }
@@ -25,10 +26,7 @@ class Gif extends Component {
       });
   }
 
-  
-
   render() {
-    console.log("I'm a gif")
     return (
       <img src={this.state.gifUrl} alt="gifs"/>
     )
