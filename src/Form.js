@@ -36,7 +36,7 @@ class Form extends Component {
   render() {
     return (
       <form>
-        {(this.state.invalid) ? <span>invalid search parameter</span> : ""}
+        
         <input 
         type="text"
         placeholder="search parameter"
@@ -45,6 +45,9 @@ class Form extends Component {
         name="searchText"
         />
         <input type="submit" value="search" onClick={this.handleFormSubmit}/>
+        <div>
+        {(this.state.invalid) ? <span>invalid search parameter</span> : ""}
+        </div>
       </form>
     )
   }
