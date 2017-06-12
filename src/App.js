@@ -35,7 +35,7 @@ class App extends Component {
         </div>
           <Form handleSubmit={this.handleSubmit}/>
           <button className="remove" onClick={this.handleRemoveAll}>Remove all</button>
-          <div>
+          <div className="gifs">
             {gifs}
           </div>
       </div>

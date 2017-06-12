@@ -21,7 +21,7 @@ class Form extends Component {
 
   handleFormSubmit(e){
     e.preventDefault();
-    axios.get(`https://api.giphy.com/v1/gifs/search?q=${this.state.searchText}&api_key=dc6zaTOxFJmzC`)
+    axios.get(`https://api.giphy.com/v1/gifs/search?q=${this.state.searchText}&api_key=dc6zaTOxFJmzC&limit=50`)
       .then(response =>{
         let index = Math.floor(Math.random()*response.data.data.length);
         let found = response.data.data[index].images.fixed_height.url;
@@ -46,7 +46,7 @@ class Form extends Component {
         />
         <input type="submit" value="search" onClick={this.handleFormSubmit}/>
         <div>
-        {(this.state.invalid) ? <span>invalid search parameter</span> : ""}
+        {(this.state.invalid) ? <span>invalid search parameter, try again!</span> : ""}
         </div>
       </form>
     )
