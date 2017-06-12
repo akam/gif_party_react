@@ -25,9 +25,9 @@ class App extends Component {
   }
 
   render() {
-    let gifs = this.state.searchItems.map((val,i)=>{
-      return <Gif search={val} key={i} />
-    })
+    let gifs = this.state.searchItems.map((val,i)=> (
+      <Gif gifUrl={val} key={i} />
+    ));
     return (
       <div className="App">
         <div className="App-header">
